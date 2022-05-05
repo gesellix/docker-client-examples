@@ -17,13 +17,12 @@
     <dependency>
       <groupId>de.gesellix</groupId>
       <artifactId>docker-client</artifactId>
-      <!--      <version>2022-04-23T13-10-00</version>-->
-      <version>2022-05-05T07-34-35</version>
+      <version>2022-05-05T20-38-00</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>1.7.31</version>
+      <version>1.7.36</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>
