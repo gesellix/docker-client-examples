@@ -1,0 +1,61 @@
+---
+name: CI
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  ci-gradle:
+    strategy:
+      matrix:
+        java: [ 8, 17 ]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: gradle
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: Set up JDK
+        uses: actions/setup-java@v3.4.1
+        with:
+          distribution: 'zulu'
+          java-version: ${{ matrix.java }}
+          cache: 'gradle'
+      - name: docker version
+        run: docker version
+      - name: docker info
+        run: docker info
+      - name: java version
+        run: java -version
+      - name: clean build
+        run: ./gradlew clean build --info --stacktrace
+  ci-maven:
+    strategy:
+      matrix:
+        java: [ 8, 17 ]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: maven
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: Set up JDK
+        uses: actions/setup-java@v3.4.1
+        with:
+          distribution: 'zulu'
+          java-version: ${{ matrix.java }}
+          cache: 'maven'
+      - name: docker version
+        run: docker version
+      - name: docker info
+        run: docker info
+      - name: java version
+        run: java -version
+      - name: clean build
+        run: mvn clean verify
+...
