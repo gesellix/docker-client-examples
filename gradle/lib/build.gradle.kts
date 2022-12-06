@@ -7,7 +7,7 @@ repositories {
 }
 
 dependencies {
-  implementation("de.gesellix:docker-client:2022-11-07T20-55-00")
+  implementation("de.gesellix:docker-client:2022-12-06T00-40-00")
   runtimeOnly("org.slf4j:slf4j-simple:2.0.5")
   testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
 }
