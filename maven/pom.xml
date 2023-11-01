@@ -17,7 +17,7 @@
     <dependency>
       <groupId>de.gesellix</groupId>
       <artifactId>docker-client</artifactId>
-      <version>2023-10-18T22-40-00-groovy-4</version>
+      <version>2023-11-01T18-45-00-groovy-4</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
