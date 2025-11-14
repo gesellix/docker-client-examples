@@ -7,7 +7,8 @@ jobs:
   ci-gradle:
     strategy:
       matrix:
-        java: [ 8, 17 ]
+        java:
+          - '21'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     defaults:
@@ -34,7 +35,8 @@ jobs:
   ci-maven:
     strategy:
       matrix:
-        java: [ 8, 17 ]
+        java:
+          - '21'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     defaults:
