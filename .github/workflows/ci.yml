@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: gradle
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 1
       - name: Set up JDK
@@ -43,7 +43,7 @@ jobs:
       run:
         working-directory: maven
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 1
       - name: Set up JDK
