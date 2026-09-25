@@ -8,7 +8,7 @@ repositories {
 
 dependencies {
   implementation("de.gesellix:docker-client:2025-11-30T22-30-00-groovy-4")
-  runtimeOnly("org.slf4j:slf4j-simple:2.0.18")
+  runtimeOnly("org.slf4j:slf4j-simple:2.0.20")
   testImplementation("org.junit.jupiter:junit-jupiter:6.1.2")
 }
 
